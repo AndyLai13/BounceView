@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BounceViewDemo</string>
+    <string name="minute_5">5 minutes</string>
+    <string name="minute_10">10 minutes</string>
+    <string name="minute_1">1 minute</string>
+    <string name="activate">activate</string>
+</resources>
