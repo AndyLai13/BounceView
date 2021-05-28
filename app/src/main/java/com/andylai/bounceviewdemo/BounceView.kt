@@ -9,7 +9,9 @@ import android.util.AttributeSet
 import android.view.View
 
 
-class BounceView : View {
+class BounceView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : View(context, attrs, defStyleAttr) {
     // moving distance from current x/y
     private var dx = 2f
     private var dy = 5f
@@ -29,17 +31,7 @@ class BounceView : View {
     private var bmp: Bitmap
     private val imageResId = R.mipmap.batman
 
-    constructor(context: Context) :
-            this(context, null)
-
-    constructor(context: Context, attrs: AttributeSet?) :
-            this(context, attrs, 0)
-
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
-            this(context, attrs, defStyleAttr, 0)
-
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) :
-            super(context, attrs, defStyleAttr, defStyleRes) {
+    init {
         bmp = BitmapFactory.decodeResource(resources, imageResId)
     }
 
